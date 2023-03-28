@@ -1,4 +1,4 @@
-public class factorial {
+public class Practical_2 {
   public static void main(String args[]) {
     int n, f = 1;
     n = Integer.parseInt(args[0]);

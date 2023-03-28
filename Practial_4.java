@@ -1,4 +1,4 @@
-public class DecimalBinary {
+public class Practial_4 {
     public static void toBinary(int decimal){
         int binary[] = new int[50];
         int index = 0;
@@ -16,3 +16,5 @@ public class DecimalBinary {
         toBinary(10);
     }
 }
+
+
