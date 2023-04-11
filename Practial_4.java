@@ -8,11 +8,11 @@ public class Practial_4 {
 
         }
         for (int i = index-1; i>=0;i--){
-            System.out.println(binary[i]);
+            System.out.print(binary[i]);
         }
     }
     public static void main(String args[]){
-        System.out.println("binary of 10 is");
+        System.out.print("binary of 10 is  ");
         toBinary(10);
     }
 }
