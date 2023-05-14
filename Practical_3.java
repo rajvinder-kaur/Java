@@ -1,77 +1,22 @@
-
-class Array {
- 
-    // Member variables of this class
-    // Private access modifier
-    private int arr[];
-    private int count;
- 
-    // Note they can only be called through function
- 
-    // Method 1
-    // Inside helper class
-    // to compute length of an array
-    public Array(int length) { arr = new int[length]; }
- 
-    // Method 2
-    // Inside helper class
-    // To print array
-    public void printArray()
-    {
- 
-        // Iterating over array using for loop
-        for (int i = 0; i < count; i++) {
- 
-            // Print the elements of an array
-            System.out.print(arr[i] + " ");
-        }
-    }
- 
-    // Method 3
-    // Inside Helper class
-    public void insert(int element)
-    {
- 
-        if (arr.length == count) {
- 
-            // Creating a new array double the size
-            // of array declared above
-            int newArr[] = new int[2 * count];
- 
-            // Iterating over new array using for loop
-            for (int i = 0; i < count; i++) {
-                newArr[i] = arr[i];
-            }
- 
-            // Assigning new array to original array
-            // created above
-            arr = newArr;
-        }
- 
-        arr[count++] = element;
-    }
-}
- 
+import java.util.Scanner;
 
 public class Practical_3 {
-    public static void main(String[] args)
-    {
- 
-        // Creating object of Array(user-defined) class
-        Array numbers = new Array(3);
- 
-        // Adding elements more than size specified above
-        // to the array to illustrate dynamic nature
-        // using the insert() method
- 
-        // Custom input elements
-        numbers.insert(10);
-        numbers.insert(30);
-        numbers.insert(40);
-        numbers.insert(50);
- 
-        // Calling the printArray() method to print
-        // new array been dynamically created
-        numbers.printArray();
+    public static void main(String[] args) {
+        int n = 5;
+        Scanner a = new Scanner(System.in);
+        int[] arr = new int[n];
+        System.out.println("Enter the elements of the array");
+        for (int i = 0; i < n; i++) {
+            arr[i] = a.nextInt();
+        }
+        a.close();
+        System.out.println("Array elements are :");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
     }
 }
+
+
+
